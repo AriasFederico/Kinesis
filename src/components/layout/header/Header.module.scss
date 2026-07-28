@@ -1,0 +1,107 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+  padding: $space-2 $space-2;
+  animation: shadow linear;
+  animation-timeline: scroll();
+  animation-range: 0 20rem;
+  animation-fill-mode: both;
+
+  .container {
+    max-width: 1152px;
+    // tamaño variable
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: $font-xl;
+
+    &::after {
+      // content: ' asd';
+    }
+  }
+  
+  .nav {
+    max-height: 0;
+    overflow: hidden;
+    font-size: $font-sm;   
+    color: $foreground-muted;
+    
+    @include for-tablet(){
+      max-height: auto;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      gap: $space-3;    
+    }
+  }    
+
+  .link {
+    &:hover {
+      color: $foreground;
+    }
+  }
+  
+  .navOpen {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-4;
+    max-height: 500px;
+    padding: 2rem 0;
+    background-color: white;
+    // border-bottom: 1px solid $color-border;
+    transition: $transition;
+    position: absolute;
+    top: 3.9rem;
+    left: 0;
+    width: 100%;
+  }
+
+
+  .cta {
+    display: none;
+
+    @include for-tablet(){
+      display: block;
+    }
+  }
+
+  .ctaMobile {
+    @include for-tablet(){
+      display: none;
+    }
+  }
+
+  .burger {    
+    color: white;
+
+    .icon {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+
+    @include for-tablet(){
+      display: none;
+    }
+  }
+}
+
+@keyframes shadow {
+  from {
+  }
+  to {
+    background-color: $bg-main;
+    box-shadow: $shadow-soft;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid $color-border;
+    // padding: 0 $space-2;
+  }
+}

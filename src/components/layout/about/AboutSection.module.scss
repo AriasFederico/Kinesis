@@ -1,0 +1,22 @@
+.title {
+    &::after {
+        content: ' recuperacion';
+        font-style: italic;
+        color: $foreground-muted;
+    }
+}
+
+.text {
+    margin-bottom: $space-2;
+}
+
+.image {
+    width: 100%;
+    margin-bottom: $space-2;
+    
+    @include for-tablet(){
+        min-width: 600px;
+        height: 460px;
+        object-fit: cover;
+    }
+}

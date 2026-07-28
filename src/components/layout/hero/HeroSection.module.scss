@@ -1,0 +1,26 @@
+.title {
+    &::after {
+        content:' humano';
+        font-style: italic;
+        color: $foreground-muted;
+    }
+}
+
+.container {
+
+    @include for-tablet(){
+        width: 60%;
+    }
+}
+
+.ctas {
+    margin-top: $space-3;
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    align-items: start;
+
+    @include for-tablet(){
+        flex-direction: row;
+    }
+}

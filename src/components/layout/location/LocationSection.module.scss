@@ -1,0 +1,85 @@
+.LocationSection {
+    padding: $space-9 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    padding: 0 $space-2;
+    max-width: 1152px;
+    margin: 0 auto;
+    margin-bottom: $space-6;
+}
+
+.title {
+    &::after {
+        content: ' el centro';
+        color: $foreground-muted;
+        font-style: italic;
+        display: block;
+    }
+}
+
+.icon {
+    color: $color-primary;
+}
+
+.item {
+    display: flex;
+    gap: $space-1;
+    align-items: center;
+
+}
+
+.locationMap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:$space-2;
+
+    @include for-tablet(){
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.locationCard {
+    background-color: $bg-main;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-border;
+    padding: $space-4;
+    width: 100%;
+
+    @include for-tablet(){
+        width: 50%;
+    }
+}
+
+.locationItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $space-2;
+    margin-bottom: $space-3;
+}
+
+.flex {
+    font-size: $font-sm;
+    p {
+        color: $foreground;
+    }
+
+    span {
+        color: $foreground-muted;
+    }
+}
+
+
+.cta {
+    width: 100%;
+    margin-top: $space-2;
+}

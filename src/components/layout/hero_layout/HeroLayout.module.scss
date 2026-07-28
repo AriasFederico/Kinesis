@@ -1,0 +1,54 @@
+.heroLayout {
+  // --- CONFIGURACIÓN PARA MOBILE ---
+  padding: $space-9 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  &.light {background-color: $white;}
+  &.soft {background-color: $bg-soft;}
+  &.bgImage {
+    background-image: url('https://media.base44.com/images/public/6a601fd5ea6251144ad44d01/5321fc0fd_generated_image.png');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      /* El gradiente: empieza sólido, se aclara al medio y se vuelve muy transparente al final */
+      background: linear-gradient(
+        to top, 
+        $bg-main 0%,      /* background sólido */
+        #0c101787 20%,   /* via-background/85 */
+        #fcfdfd15 100%   /* to-background/40 */
+      );
+    }
+  }
+  
+  .container {
+    z-index: 100;
+    width: 100%;
+    @include container;
+  }
+
+  // --- CONFIGURACIÓN PARA DESKTOP ---
+  @include for-tablet {
+    padding:0;
+    
+    .container {
+      // comentar width si es un hero con bg
+        width: auto;
+      // comentar width si es un hero con bg
+        display: flex;
+        align-items: center;
+        gap: $space-4;
+      }
+    }
+}

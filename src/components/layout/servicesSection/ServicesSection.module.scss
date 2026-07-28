@@ -1,0 +1,72 @@
+.container {
+    width: 100%;
+}
+
+.title {
+    &::after {
+        content:' el equilibrio';
+        display: block;
+        font-style: italic;
+        color: $foreground-muted;
+    }
+}
+
+.items {
+    margin-top: $space-8;
+}
+
+.item {
+    border-top: 1px solid $color-border;
+    padding: $space-4 0;
+    display: flex;
+    transition: $transition;
+    flex-direction: column;
+
+    &:hover {
+        .id {
+            color: $color-primary;
+        }
+
+        .image {
+            transform: scale(1.03);
+        }
+    }
+
+    @include for-tablet(){
+        flex-direction: row;
+        justify-content: space-between;
+        gap: $space-6;
+    }
+}
+
+.id {
+  font-family: "Cormorant Garamond", serif;
+  font-size: $font-2xl  ;
+  color: $foreground-muted;
+}
+
+.itemTitle {
+    margin-top: $space-1;
+    font-size: $font-2xl;
+}
+
+.description {
+    margin-top: $space-2;
+}
+
+.media {
+    overflow: hidden;
+}
+
+.image {
+    margin-top: $space-3;
+    width: 834px;
+    max-height: 330px;
+    object-fit: cover;
+    transition: $transition;
+
+    @include for-tablet(){
+        margin: 0;
+    }
+
+}
