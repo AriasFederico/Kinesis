@@ -56,8 +56,8 @@
     gap: $space-4;
     max-height: 500px;
     padding: 2rem 0;
-    background-color: white;
-    // border-bottom: 1px solid $color-border;
+    background-color: $bg-main;
+    border-bottom: 1px solid $color-border;
     transition: $transition;
     position: absolute;
     top: 3.9rem;
