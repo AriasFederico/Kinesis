@@ -21,7 +21,10 @@ export const dataKinesiologo = {
       { text: 'Nosotros', href: '#about' },
       { text: 'Ubicación', href: '#location' },
     ],
-    cta: { text: 'Reservar' },
+    cta: {
+      text: 'Reservar',
+      href: buildWaLink('Hola!, me gustaría agendar un turno.'),
+    },
   },
 
   hero: {

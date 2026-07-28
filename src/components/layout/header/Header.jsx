@@ -44,12 +44,13 @@ export const Header = ({ data, logo }) => {
               size='sm'
               onCLick={() => setIsOpen(false)}
               text={cta.text}
+              href={cta.href}
             />
           </div>
         </nav>
 
         <div className={styles.cta}>
-          <ButtonCta size='sm' text={cta.text} />
+          <ButtonCta size='sm' text={cta.text} href={cta.href} />
         </div>
 
         <button
