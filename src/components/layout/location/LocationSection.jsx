@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { iconMap } from '../../../iconMap';
 import { ButtonCta, MapComponent, TopSection } from '../../ui';
 import { SectionLayout } from '../';
@@ -11,10 +12,24 @@ export const LocationSection = ({ data }) => {
       <div className={styles.container}>
         <div className={styles.header}>
           <TopSection text={data.topSection} />
-          <h2 className={styles.title}>{data.title}</h2>
+          <motion.h2
+            className={styles.title}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {data.title}
+          </motion.h2>
         </div>
         <div className={styles.locationMap}>
-          <div className={styles.locationCard}>
+          <motion.div
+            className={styles.locationCard}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+          >
             <TopSection text={card.topSection} />
             <div className={styles.locationItem}>
               {card?.data?.map(({ title, text, icon }) => {
@@ -31,7 +46,7 @@ export const LocationSection = ({ data }) => {
               })}
             </div>
             <ButtonCta text={cta.text} href={cta.href} />
-          </div>
+          </motion.div>
           <MapComponent coordenates={data.coordenatesMap} />
         </div>
       </div>
