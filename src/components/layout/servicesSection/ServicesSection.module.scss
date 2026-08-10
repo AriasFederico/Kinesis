@@ -3,6 +3,7 @@
 }
 
 .title {
+    color: $primary-foreground;
     &::after {
         content:' el equilibrio';
         display: block;
@@ -13,6 +14,12 @@
 
 .items {
     margin-top: $space-8;
+
+    @include for-tablet(){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space-4;
+    }
 }
 
 .item {
@@ -23,31 +30,20 @@
     flex-direction: column;
 
     &:hover {
-        .id {
-            color: $color-primary;
-        }
-
         .image {
             transform: scale(1.03);
         }
-    }
 
-    @include for-tablet(){
-        flex-direction: row;
-        justify-content: space-between;
-        gap: $space-6;
+        .itemTitle {
+            color: $color-primary;
+        }
     }
-}
-
-.id {
-  font-family: "Cormorant Garamond", serif;
-  font-size: $font-2xl  ;
-  color: $foreground-muted;
 }
 
 .itemTitle {
     margin-top: $space-1;
     font-size: $font-2xl;
+    color: $primary-foreground;
 }
 
 .description {
@@ -55,12 +51,12 @@
 }
 
 .media {
+    margin-bottom: $space-1;
     overflow: hidden;
 }
 
 .image {
-    margin-top: $space-3;
-    width: 834px;
+    width: 600px;
     max-height: 330px;
     object-fit: cover;
     transition: $transition;

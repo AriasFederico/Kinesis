@@ -1,13 +1,14 @@
 .testimony {
-    padding: 2rem;
-    background-color: $bg-main;
     width: fit-content;
     max-width: 23rem;
-    border:1px solid $color-border;
+    padding: $space-4 0;
     transition: $transition;
+    border-bottom: 1px solid $color-primary-muted;
 
-    &:hover {
-        border-color: $color-primary-muted;
+
+    @include for-tablet(){
+        border-top: 1px solid $color-primary-muted;
+        border-bottom: 1px solid $color-primary-muted;
     }
 }
 
@@ -21,25 +22,27 @@
 .text {
     margin-bottom: $space-2;
     line-height: 1.7;
-    font-size: 14px;
+    // font-size: 14px;
     font-style: italic;
+    color: $primary-foreground;
 }
 
 .userFlex {
     display: flex;
     align-items: center;
     gap: .5rem;
-    border-top: 1px solid $foreground-muted;
+    // border-top: 1px solid $color-primary-muted;
     padding-top: $space-2;
 }
 
 .userName {
     font-weight: bold;
     font-size: $font-lg;
+    color: $primary-foreground;
 }
 
 .userAdjetive {
     font-size: 12px;
     letter-spacing: 1px;
-    color: $foreground-muted;
+    color: $color-primary;
 }

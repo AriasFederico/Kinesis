@@ -44,17 +44,18 @@ img, svg {
 h1,h2,h3,h4 {
   font-family: "Cormorant Garamond", serif;
   color: $foreground;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 56px;
     line-height: 1;
     margin-bottom: $space-2;
     color: $foreground;
 
     @include for-tablet(){
-        font-size: 74px;
+        // font-size: 74px;
+        font-size: 6rem;
     }
 }
 

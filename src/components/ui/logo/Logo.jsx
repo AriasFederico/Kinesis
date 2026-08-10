@@ -8,20 +8,16 @@ export const Logo = ({
   secondName,
 }) => {
   return (
-    <button
-      type='button'
-      className={styles.logo}
-      onClick={() => window.scrollTo({ top: 0 })}
-    >
-      <img
+    <a href='/' type='button' className={styles.logo}>
+      {/* <img
         src={src}
         alt={clinicName}
         className={`${styles.img} ${className}`}
-      />
+      /> */}
       <div className={styles.itemsFlex}>
         <p className={`${styles.clinicName} ${classNameText}`}>{clinicName}</p>
         {secondName && <span className={styles.secondName}>{secondName}</span>}
       </div>
-    </button>
+    </a>
   );
 };

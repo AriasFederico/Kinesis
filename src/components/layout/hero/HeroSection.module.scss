@@ -1,20 +1,27 @@
 .title {
     &::after {
-        content:' humano';
+        content:' movimiento humano';
+        display: block;
         font-style: italic;
         color: $foreground-muted;
     }
 }
 
-.container {
+.text {
+    max-width: 580px;
+    color: $foreground;
+    font-size: $font-lg;
+}
 
+.container {
+    width: 100%;
     @include for-tablet(){
         width: 60%;
     }
 }
 
 .ctas {
-    margin-top: $space-3;
+    margin-top: $space-6;
     display: flex;
     flex-direction: column;
     gap: $space-1;

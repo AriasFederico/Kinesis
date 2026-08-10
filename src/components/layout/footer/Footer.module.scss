@@ -1,5 +1,5 @@
 .footer {
-    background-color: $bg-soft;
+    background-color: $bg-main;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
@@ -10,6 +10,10 @@
 
     @include for-tablet(){
         flex-direction: row;
+    }
+
+    .textFooter {
+        color: $white;
     }
 }
 

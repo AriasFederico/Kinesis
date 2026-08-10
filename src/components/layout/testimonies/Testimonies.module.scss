@@ -1,4 +1,5 @@
 .title {
+    color: $primary-foreground;
     &::after {
         content: ' recuperación';
         font-style: italic;
@@ -19,9 +20,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: $space-2;
-
+    
     @include for-tablet(){
+        gap: $space-6;
         flex-direction: row;
     }
 }

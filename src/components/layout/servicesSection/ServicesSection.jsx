@@ -5,7 +5,7 @@ import styles from './ServicesSection.module.scss';
 
 export const ServicesSection = ({ data }) => {
   return (
-    <SectionLayout id={'services'}>
+    <SectionLayout id={'services'} bgVariant={'soft'}>
       <div className={styles.container}>
         <div className={styles.header}>
           <TopSection text={data.topSection} />
@@ -30,13 +30,13 @@ export const ServicesSection = ({ data }) => {
               transition={{ duration: duration }}
               viewport={{ once: true }}
             >
-              <span className={styles.id}>{id}</span>
+              {/* <span className={styles.id}>{id}</span> */}
+              <div className={styles.media}>
+                <img src={src} alt={title} className={styles.image} />
+              </div>
               <div className={styles.info}>
                 <h3 className={styles.itemTitle}>{title}</h3>
                 <p className={styles.description}>{text}</p>
-              </div>
-              <div className={styles.media}>
-                <img src={src} alt={title} className={styles.image} />
               </div>
             </motion.div>
           ))}

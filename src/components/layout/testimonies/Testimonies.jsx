@@ -4,7 +4,7 @@ import { SectionLayout } from '..';
 import styles from './Testimonies.module.scss';
 export const Testimonies = ({ data }) => {
   return (
-    <SectionLayout>
+    <SectionLayout bgVariant={'soft'}>
       <div className={styles.container}>
         <div className={styles.header}>
           <TopSection text={data.topSection} />

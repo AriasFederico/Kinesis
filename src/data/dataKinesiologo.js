@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 
 const CLINIC_NAME = 'Kinesis';
+const SECOND_NAME = 'CENTRO DE KINESIOLOGÍA & FISIOTERAPIA';
 const PHONE_NUMBER = '5491112345678'; // Número sin espacios ni símbolos (+, -, etc.)
 
 // Helper function para armar la URL de WhatsApp limpia
@@ -10,6 +11,7 @@ const buildWaLink = (message) =>
 export const dataKinesiologo = {
   logo: {
     clinicName: CLINIC_NAME,
+    secondName: SECOND_NAME,
     src: logo,
   },
 
@@ -29,7 +31,7 @@ export const dataKinesiologo = {
 
   hero: {
     topSection: '- KINESIOLOGÍA & MOVIMIENTO',
-    title: 'La arquitectura del movimiento', // con ::before 'humano'
+    title: 'La arquitectura del ', // con ::before 'humano'
     text: 'Restauramos la libertad de tu cuerpo con precisión clínica y calidez humana. Cada sesión es un viaje hacia tu equilibrio físico.',
     ctas: [
       {
@@ -131,10 +133,15 @@ export const dataKinesiologo = {
   },
 
   ctaSection: {
-    topSection: '- COMENCEMOS -',
+    topSection: '- EMPEZÁ HOY -',
     title: 'Reserva tu ', // con ::before 'primera sesión',
     text: 'Un mensaje es el primer paso - Respondemos en minutos',
     cta: buildWaLink('Hola!, me gustaría agendar un turno.'),
+    rrss: [
+      { icon: 'instagram', href: '/' },
+      { icon: 'facebook', href: '/' },
+      { icon: 'tiktok', href: '/' },
+    ],
   },
 
   footer: {

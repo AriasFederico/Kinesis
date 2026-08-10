@@ -1,107 +1,108 @@
+// 1. Keyframes al inicio (o en un archivo global de animaciones)
+@keyframes headerScroll {
+  from {
+    color: $white; // Te conviene usar tu variable si tenés una
+    background-color: transparent;
+    // box-shadow: 0 0 0 transparent;
+    backdrop-filter: blur(2px);
+  }
+  to {
+    color: $primary-foreground;
+    background-color: $bg-soft;
+    box-shadow: $shadow-soft;
+    backdrop-filter: blur(10px);
+  }
+}
+
+// 2. Bloque Principal del Header
 .header {
+  // Posicionamiento y Layout
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 500;
-  padding: $space-2 $space-2;
-  animation: shadow linear;
+  width: 100%;
+  padding: $space-2;
+  color: $white;
+
+  // Scroll Animation Driven
+  animation: headerScroll linear both;
   animation-timeline: scroll();
   animation-range: 0 20rem;
-  animation-fill-mode: both;
+
+  // --- Elementos Hijos ---
 
   .container {
-    max-width: 1152px;
-    // tamaño variable
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
-  .logo {
-    font-size: $font-xl;
-
-    &::after {
-      // content: ' asd';
-    }
+  .link {
+    color: currentColor;
   }
-  
+
   .nav {
     max-height: 0;
     overflow: hidden;
-    font-size: $font-sm;   
-    color: $foreground-muted;
-    
-    @include for-tablet(){
-      max-height: auto;
-      overflow: visible;
+    color: currentColor;
+    font-size: $font-sm;
+
+    @include for-tablet() {
       display: flex;
       align-items: center;
-      gap: $space-3;    
-    }
-  }    
-
-  .link {
-    &:hover {
-      color: $foreground;
+      gap: $space-3;
+      max-height: none; // Nota: 'none' es mejor que 'auto' para max-height en CSS
+      overflow: visible;
     }
   }
-  
+
   .navOpen {
-    // background-color: red;
+    position: absolute;
+    top: 3.9rem;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $space-4;
+    width: 100%;
     max-height: 500px;
     padding: 2rem 0;
-    background-color: $bg-main;
+
+    // cambiar en ser necesario
+    color: $primary-foreground;
+    
+    background-color: $bg-soft;
     border-bottom: 1px solid $color-border;
     transition: $transition;
-    position: absolute;
-    top: 3.9rem;
-    left: 0;
-    width: 100%;
   }
-
 
   .cta {
     display: none;
 
-    @include for-tablet(){
+    @include for-tablet() {
       display: block;
     }
   }
 
   .ctaMobile {
-    @include for-tablet(){
+    @include for-tablet() {
       display: none;
     }
   }
 
-  .burger {    
-    color: white;
+  .burger {
+    color: currentColor;
+
+    @include for-tablet() {
+      display: none;
+    }
 
     .icon {
       width: 1.7rem;
       height: 1.7rem;
     }
-
-    @include for-tablet(){
-      display: none;
-    }
-  }
-}
-
-@keyframes shadow {
-  from {
-  }
-  to {
-    background-color: $bg-main;
-    box-shadow: $shadow-soft;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid $color-border;
-    // padding: 0 $space-2;
   }
 }

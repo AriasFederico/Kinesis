@@ -5,14 +5,10 @@
     padding: $space-9 0;
     display: flex;
     justify-content: center;
-
-    &:hover {
-        background-color: $color-primary;
-        transition: $transition;
-    }
 }
 
 .container {
+    width: 100%;
     max-width: 1152px;
     margin: 0 auto;
     display: flex;
@@ -27,11 +23,43 @@
 	&::after {
 		content: ' primera sesión';
 		font-style: italic;
+        color: $foreground-muted;
 		display: block;
 	}
 }
 
-.text {
+.ctas {
     margin-top: $space-3;
+}
+
+.text {
+    // margin-top: $space-3;
     color: $primary-foreground;
+}
+
+.rrss {
+    margin-top: $space-4;
+    border-top: 1px solid $color-border;
+    width: 80%;
+    padding: $space-4 0;
+}
+
+.rrssText {
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.iconsContainer {
+    margin-top: $space-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+}
+
+.iconRss {
+    color: $foreground-muted;
+    &:hover {
+        color: $color-primary;
+    }
 }

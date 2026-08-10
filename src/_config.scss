@@ -5,9 +5,9 @@
 // ==========================================
 
 // Tonos Principales (Marca)
-$color-primary:        #15c1ad;
-$color-primary-muted:  #15c1ad53; // El "alpha" para fondos suaves
-$color-primary-dark:   #17a393;                // Para estados :hover
+$color-primary:        #b96c50;
+$color-primary-muted:  #b96c5053; // El "alpha" para fondos suaves
+$color-primary-dark:   #884d38;                // Para estados :hover
 
 // 
 $color-orange: #f97924;
@@ -21,15 +21,15 @@ $color-destructive-muted:#ea433411;
 $color-gray:#94a3b8;
 
 // Superficies y Fondos (Backgrounds)
-$bg-main:              #0c1017; // El "papel" de la web
-$bg-soft:              #e7ebef; // Secciones con ligero contraste
+$bg-main:              #202020; // El "papel" de la web
+$bg-soft:              #f8f8f6; // Secciones con ligero contraste
 $white:                #ffffff;
 
 // Contenidos y Textos (Foregrounds)
 $foreground:           #e7ebef; // Títulos y textos fuertes (la "tinta")
-$primary-foreground:#0c1017;
-$color-border:         #2a2f3c;
-$foreground-muted:     #98a4b3; // Párrafos y textos secundarios
+$primary-foreground:   #0c1017;
+$color-border:         #787b8399;
+$foreground-muted:     #868f9a; // Párrafos y textos secundarios
 
 // ==========================================
 // SISTEMA DE ESPACIOS (Regla de los 8px)
@@ -68,7 +68,7 @@ $weight-bold: 700;
 $radius-md: 16px;
 $radius-lg: 16px;
 $shadow-soft: 1px 1px 10px rgba(50, 50, 50, 0.1);
-$shadow-primary:1px 1px 10px rgba(67,173,244,0.35);
+$shadow-primary:1px 1px 10px #b96c5059;
 $transition: all 0.4s ease;
 
 // ==========================================
@@ -87,7 +87,7 @@ $transition: all 0.4s ease;
 
 // Contenedor estándar para que no se "desparrame" la web
 @mixin container {
-    max-width: 1152px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 $space-2;
 }

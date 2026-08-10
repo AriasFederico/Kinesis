@@ -1,16 +1,15 @@
 .button {
-  // background-color: ;
-  // border: 1px solid $color-border;
-  border-radius: $radius-md;
+  // border-radius: $radius-md;
   transition: $transition;
   font-family: $font-accent;
-  // box-shadow: $shadow-soft;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: $space-1;
   background-color: $color-primary;
   color: $white;
+  letter-spacing: 1px;
+
   
   &:hover {
     background-color: $color-primary-dark;
@@ -19,12 +18,16 @@
   
   &.md {
     padding: $space-2 $space-3; // 16px x 32px
-    font-size: $font-base;
+    font-size: $font-sm;
 
     .icon {
       width: 1.2rem;
       height: 1.2rem;
     }
+  }
+
+  &.primary {
+    box-shadow: $shadow-primary;
   }
 
   &.sm {
@@ -40,7 +43,7 @@
   &.secondary {
     background-color: transparent;
     color: $foreground-muted;
-    border: 1px solid $foreground-muted;
+    // border: 1px solid $foreground-muted;
 
     &:hover {
       // background-color: $white;

@@ -26,7 +26,12 @@ export const Header = ({ data, logo }) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Logo clinicName={data.clinicName} src={logo.src} size={'sm'} />
+        <Logo
+          clinicName={logo.clinicName}
+          src={logo.src}
+          size={'sm'}
+          secondName={logo.secondName}
+        />
 
         <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
           {nav_links.map((link) => (
