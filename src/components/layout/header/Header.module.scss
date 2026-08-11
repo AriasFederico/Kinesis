@@ -28,7 +28,7 @@
   // Scroll Animation Driven
   animation: headerScroll linear both;
   animation-timeline: scroll();
-  animation-range: 0 20rem;
+  animation-range: 0 25rem;
 
   // --- Elementos Hijos ---
 
@@ -42,6 +42,10 @@
 
   .link {
     color: currentColor;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   .nav {
