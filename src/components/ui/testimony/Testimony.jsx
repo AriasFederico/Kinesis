@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { LuQuote } from 'react-icons/lu';
+import { LuMessageSquareQuote } from 'react-icons/lu';
 import styles from './Testimony.module.scss';
 
 export const Testimony = ({ text, user, adjetive, duration }) => {
@@ -11,7 +11,7 @@ export const Testimony = ({ text, user, adjetive, duration }) => {
       transition={{ duration: duration }}
       viewport={{ once: true }}
     >
-      <LuQuote className={styles.quote} />
+      <LuMessageSquareQuote className={styles.quote} />
       <p className={styles.text}>"{text}"</p>
       <div className={styles.userFlex}>
         <div className={styles.userContainer}>

@@ -42,6 +42,49 @@ export const dataKinesiologo = {
     ],
   },
 
+  team: {
+    top_section: '- EL COLECTIVO',
+    title: 'Especialistas en cada zona del cuerpo',
+    text: 'Destacamos la habilidad y la especialización por encima de la apariencia. Cada profesional enfoca su práctica en un área concreta del sistema músculo-esquelético.',
+    items: [
+      {
+        name: 'Lic. Marina Sosa',
+        speciality: 'Kinesiología Deportiva',
+        exp: '12 años de práctica',
+      },
+      {
+        name: 'Lic. Tomás Rinaldi',
+        speciality: 'Rehabilitación Postural',
+        exp: '9 años de práctica',
+      },
+      {
+        name: 'Lic. Sofía Beltrán',
+        speciality: 'Fisioterapia Traumato.',
+        exp: '14 años de práctica',
+      },
+    ],
+  },
+
+  coverages: {
+    top_section: '- COBERTURA',
+    title: 'Obras sociales',
+    text: 'Trabajamos con las principales obras sociales y prepagas. Verificá tu cobertura antes de tu primera sesión escribiéndonos por WhatsApp.',
+    items: [
+      'Swiss Medical',
+      'OSPERGHYAR',
+      'Union Personal',
+      'OSDE',
+      'Galeno',
+      'Omint',
+      'Medifé',
+      'IOMA',
+      'OSUTHGRA',
+      'PAMI',
+      'OSECAC',
+      'AcaSalud',
+    ],
+  },
+
   services: {
     topSection: '- ESPECIALIDADES',
     title: 'Tres caminos hacia', // con ::before 'el equilibrio',
@@ -95,6 +138,24 @@ export const dataKinesiologo = {
         user: 'Lucas Fernández',
         adjetive: 'Kinesiología deportiva',
         duration: '.9',
+      },
+      {
+        text: 'Años de dolor de espalda por el trabajo de oficina se disolvieron en pocas sesiones. La calma del consultorio y la escucha real marcaron toda la diferencia.',
+        user: 'Carla Méndez',
+        adjetive: 'Corrección postural',
+        duration: '1.2',
+      },
+      {
+        text: 'Años de dolor de espalda por el trabajo de oficina se disolvieron en pocas sesiones. La calma del consultorio y la escucha real marcaron toda la diferencia.',
+        user: 'Carla Méndez',
+        adjetive: 'Corrección postural',
+        duration: '1.2',
+      },
+      {
+        text: 'Años de dolor de espalda por el trabajo de oficina se disolvieron en pocas sesiones. La calma del consultorio y la escucha real marcaron toda la diferencia.',
+        user: 'Carla Méndez',
+        adjetive: 'Corrección postural',
+        duration: '1.2',
       },
       {
         text: 'Años de dolor de espalda por el trabajo de oficina se disolvieron en pocas sesiones. La calma del consultorio y la escucha real marcaron toda la diferencia.',

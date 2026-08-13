@@ -1,0 +1,55 @@
+.container {
+    width: 100%;
+}
+
+.title {
+    color: $primary-foreground;
+}
+
+.text {
+    max-width: 600px;
+    color: $foreground-muted;
+}
+
+.items {
+    margin-top: $space-4;
+    
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    
+    @include for-tablet(){
+        flex-direction: row;
+        gap: $space-2;
+    }
+    // si son + de 3 aplicar grid
+}
+
+.name {
+    color: $primary-foreground;
+    font-size: $font-xl;
+}
+
+
+.speciality {
+    margin-top: $space-1;
+    display: inline-block;
+    letter-spacing: 2px;
+    color: $color-primary;
+    font-size: $font-sm;
+}
+
+.exp {
+    margin-top: $space-1;
+}
+
+.item {
+    flex: 1;
+    border: 1px solid $color-border;
+    padding: $space-3;
+    transition: $transition;
+
+    &:hover {
+        box-shadow: $shadow-soft;
+    }
+}

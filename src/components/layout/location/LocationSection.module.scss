@@ -46,7 +46,7 @@
 }
 
 .locationCard {
-    background-color: $bg-main;
+    background-color: $bg-soft;
     display: flex;
     flex-direction: column;
     border: 1px solid $color-border;
@@ -70,7 +70,7 @@
 .flex {
     font-size: $font-sm;
     p {
-        color: $foreground;
+        color: $primary-foreground;
     }
 
     span {

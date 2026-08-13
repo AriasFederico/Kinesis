@@ -5,11 +5,12 @@
     padding: $space-9 0;
     display: flex;
     justify-content: center;
+    // min-height: 100vh;
 }
 
 .container {
     width: 100%;
-    max-width: 1152px;
+    // max-width: 1152px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -19,6 +20,7 @@
 
 .title {
 	color: $primary-foreground;
+    font-size: 56px;
 
 	&::after {
 		content: ' primera sesión';

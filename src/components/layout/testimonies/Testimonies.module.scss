@@ -22,7 +22,9 @@
     align-items: flex-start;
     
     @include for-tablet(){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: $space-6;
-        flex-direction: row;
+        // flex-direction: row;
     }
 }

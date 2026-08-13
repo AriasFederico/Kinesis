@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    @include for-tablet(){
+        flex-direction: row;
+    }
+}
+
+.header {
+    flex: 1;
+}
+
+.items {
+    flex: 1;
+    display: grid;
+    row-gap: $space-2;
+    grid-template-columns: 1fr 1fr;
+    // gap: $space-2;
+    @include for-tablet(){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.coverage {
+    border-left: 1px solid $color-primary;
+    padding: 0 $space-1;
+    height: fit-content;
+    letter-spacing: 2px;
+    transition: $transition;
+
+    &:hover {
+        color: $foreground;
+        user-select: none;
+        cursor: pointer;
+    }
+
+}
